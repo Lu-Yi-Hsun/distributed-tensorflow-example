@@ -169,7 +169,8 @@ elif FLAGS.job_name == "worker":
 								" Epoch: %2d," % (epoch+1), 
 								" Batch: %3d of %3d," % (i+1, batch_count), 
 								" Cost: %.4f," % cost, 
-								" AvgTime: %3.2fms" % float(elapsed_time*1000/frequency))
+								" AvgTime: %3.2fms" % float(elapsed_time*1000/frequency),
+								"Test-Accuracy: %2.2f" % sess.run(accuracy, feed_dict={x: mnist.test.images, y_: mnist.test.labels}))
 					count = 0
 
 
