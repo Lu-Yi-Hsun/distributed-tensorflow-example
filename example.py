@@ -39,7 +39,7 @@ server = tf.train.Server(
 
 # config
 batch_size = 100
-learning_rate = 0.0005
+learning_rate = 0.05
 training_epochs = 20
 logs_path = "/tmp/mnist/1"
 
