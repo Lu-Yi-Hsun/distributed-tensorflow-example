@@ -45,8 +45,7 @@ logs_path = "/tmp/mnist/1"
 
 # load mnist data set
 from tensorflow.examples.tutorials.mnist import input_data
-mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
-
+mnist = input_data.read_data_sets('MNIST_data', one_hot=True, source_url='http://yann.lecun.com/exdb/mnist/')
 if FLAGS.job_name == "ps":
     server.join()
 elif FLAGS.job_name == "worker":
